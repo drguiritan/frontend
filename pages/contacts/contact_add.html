@@ -74,10 +74,11 @@
                 setTimeout(() => { this.message = ""; }, 3000); // Clear message after 3 seconds
                 return; // Exit the function early
             }
-            
-            fetch(`${Alpine.store("settings").apiBaseUrl}/contact/`, {
+            console.log('datam:', this.contact.data);
+            fetch(`${Alpine.store("settings").apiBaseUrl}/contact/`, 
+              {
                 method: "POST",
-                headers: {"Content-Type": "application/json" },
+                headers: {"Content-Type": "application/json",},
                 body: JSON.stringify(this.contact.data)
             })
             .then(response => {

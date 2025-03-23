@@ -1,7 +1,7 @@
 
 
 Alpine.store("settings", {
-    apiBaseUrl:"http://172.23.155.46:4566/default/api/",  
+    apiBaseUrl:"https://172.26.253.11:4444/default/api",  
     appName: "contact application",  
    
 });
